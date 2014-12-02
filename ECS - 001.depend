@@ -1,0 +1,223 @@
+# depslib dependency file v1.0
+1403276567 source:l:\diversos\programação\testes\ecs - 001\src\system.cpp
+	"../include/System.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1403206345 l:\diversos\programação\testes\ecs - 001\include\system.h
+	"World.h"
+
+1403278365 source:l:\diversos\programação\testes\ecs - 001\main.cpp
+	"include/System.h"
+	<list>
+
+1403278862 l:\diversos\programação\testes\ecs - 001\include\components.h
+
+1403108257 source:l:\diversos\programação\testes\ecs - 001\src\thread.cpp
+	"../include/Thread.h"
+
+1403109275 l:\diversos\programação\testes\ecs - 001\include\thread.h
+	<windows.h>
+	<exception>
+	<stdio.h>
+
+1403207281 source:l:\diversos\programação\testes\ecs - 001\src\mainmenu.cpp
+	"../include/MainMenu.h"
+
+1403206978 l:\diversos\programação\testes\ecs - 001\include\mainmenu.h
+
+1403277065 l:\diversos\programação\testes\ecs - 001\include\world.h
+	"Components.h"
+	"Thread.h"
+
+1403277129 source:l:\diversos\programação\testes\ecs - 001\src\world.cpp
+	"../include/World.h"
+	<time.h>
+
+1403309759 source:l:\diversos\programação\ecs\ecs - 001\src\mainmenu.cpp
+	"../include/MainMenu.h"
+	"../include/LMap.h"
+	"../include/Components.h"
+	<stdio.h>
+
+1403206978 l:\diversos\programação\ecs\ecs - 001\include\mainmenu.h
+
+1403362533 source:l:\diversos\programação\ecs\ecs - 001\src\system.cpp
+	"../include/System.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1403308338 l:\diversos\programação\ecs\ecs - 001\include\system.h
+	"World.h"
+
+1403362880 l:\diversos\programação\ecs\ecs - 001\include\world.h
+	"Components.h"
+	"Thread.h"
+	"LMap.h"
+
+1403364541 l:\diversos\programação\ecs\ecs - 001\include\components.h
+	<stdlib.h>
+	<stdio.h>
+
+1403109275 l:\diversos\programação\ecs\ecs - 001\include\thread.h
+	<windows.h>
+	<exception>
+	<stdio.h>
+
+1403108257 source:l:\diversos\programação\ecs\ecs - 001\src\thread.cpp
+	"../include/Thread.h"
+
+1403369509 source:l:\diversos\programação\ecs\ecs - 001\src\world.cpp
+	"../include/World.h"
+	<time.h>
+
+1403364322 source:l:\diversos\programação\ecs\ecs - 001\main.cpp
+	"include/System.h"
+	"include/LMap.h"
+	"include/MainMenu.h"
+	<list>
+	<map>
+
+1403283116 source:l:\diversos\programação\ecs\ecs - 001\src\lmap.cpp
+	"../include/LMap.h"
+
+1403322060 l:\diversos\programação\ecs\ecs - 001\include\lmap.h
+	"LClasses/Lista/Lista.h"
+
+1403304468 l:\diversos\programação\ecs\ecs - 001\include\lclasses\lista\lista.h
+	<stdlib.h>
+	"../Exception/LException.h"
+
+1403280691 l:\diversos\programação\ecs\ecs - 001\include\lclasses\exception\lexception.h
+	<exception>
+	<string.h>
+	<stdio.h>
+
+1403283116 source:l:\diversos\programação\ecs\ecs - 001.2\src\lmap.cpp
+	"../include/LMap.h"
+
+1403322060 l:\diversos\programação\ecs\ecs - 001.2\include\lmap.h
+	"LClasses/Lista/Lista.h"
+
+1403304468 l:\diversos\programação\ecs\ecs - 001.2\include\lclasses\lista\lista.h
+	<stdlib.h>
+	"../Exception/LException.h"
+
+1403280691 l:\diversos\programação\ecs\ecs - 001.2\include\lclasses\exception\lexception.h
+	<exception>
+	<string.h>
+	<stdio.h>
+
+1403309759 source:l:\diversos\programação\ecs\ecs - 001.2\src\mainmenu.cpp
+	"../include/MainMenu.h"
+	"../include/LMap.h"
+	"../include/Components.h"
+	<stdio.h>
+
+1403206978 l:\diversos\programação\ecs\ecs - 001.2\include\mainmenu.h
+
+1403643819 l:\diversos\programação\ecs\ecs - 001.2\include\components.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1403644356 source:l:\diversos\programação\ecs\ecs - 001.2\src\system.cpp
+	"../include/System.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1403308338 l:\diversos\programação\ecs\ecs - 001.2\include\system.h
+	"World.h"
+
+1403643171 l:\diversos\programação\ecs\ecs - 001.2\include\world.h
+	"Components.h"
+	"Thread.h"
+	"LMap.h"
+
+1403109275 l:\diversos\programação\ecs\ecs - 001.2\include\thread.h
+	<windows.h>
+	<exception>
+	<stdio.h>
+
+1403108257 source:l:\diversos\programação\ecs\ecs - 001.2\src\thread.cpp
+	"../include/Thread.h"
+
+1403644435 source:l:\diversos\programação\ecs\ecs - 001.2\src\world.cpp
+	"../include/World.h"
+	<time.h>
+
+1403582905 source:l:\diversos\programação\ecs\ecs - 001.2\main.cpp
+	"include/System.h"
+	"include/LMap.h"
+	"include/MainMenu.h"
+	<list>
+	<map>
+
+1403283116 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\lmap.cpp
+	"../include/LMap.h"
+
+1403322060 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\lmap.h
+	"LClasses/Lista/Lista.h"
+
+1403304468 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\lclasses\lista\lista.h
+	<stdlib.h>
+	"../Exception/LException.h"
+
+1403280691 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\lclasses\exception\lexception.h
+	<exception>
+	<string.h>
+	<stdio.h>
+
+1403309759 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\mainmenu.cpp
+	"../include/MainMenu.h"
+	"../include/LMap.h"
+	"../include/Components.h"
+	<stdio.h>
+
+1403206978 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\mainmenu.h
+
+1403643819 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\components.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1403644356 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\system.cpp
+	"../include/System.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1403308338 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\system.h
+	"World.h"
+
+1403643171 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\world.h
+	"Components.h"
+	"Thread.h"
+	"LMap.h"
+
+1403109275 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\thread.h
+	<windows.h>
+	<exception>
+	<stdio.h>
+
+1403108257 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\thread.cpp
+	"../include/Thread.h"
+
+1403644435 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\world.cpp
+	"../include/World.h"
+	<time.h>
+
+1403582905 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\main.cpp
+	"include/System.h"
+	"include/LMap.h"
+	"include/MainMenu.h"
+	<list>
+	<map>
+

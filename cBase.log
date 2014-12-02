@@ -1,0 +1,96 @@
+Entity:
+Dctor of Position: 6 x 5
+Dctor of Bomb: toExplode: -1; Power: 1
+Dctor of AABB: 1 x 1
+Dctor of Image: O
+
+Entity:
+Dctor of Position: 6 x 4
+Dctor of Image: o
+Dctor of BombFire: Dir: 0; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 6 x 6
+Dctor of Image: o
+Dctor of BombFire: Dir: 1; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 5 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 2; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 5 x 5
+Dctor of Bomb: toExplode: -1; Power: 1
+Dctor of AABB: 1 x 1
+Dctor of Image: O
+
+Entity:
+Dctor of Position: 6 x 3
+Dctor of Image: o
+Dctor of BombFire: Dir: 0; toVanish: 9; Power: 0
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 4 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 2; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 4 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 2; toVanish: 9; Power: 0
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 6 x 3
+Dctor of Bomb: toExplode: -1; Power: 1
+Dctor of AABB: 1 x 1
+Dctor of Image: O
+
+Entity:
+Dctor of Position: 6 x 2
+Dctor of Image: o
+Dctor of BombFire: Dir: 0; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 6 x 4
+Dctor of Image: o
+Dctor of BombFire: Dir: 1; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 3 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 2; toVanish: 9; Power: 0
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 5 x 3
+Dctor of Image: o
+Dctor of BombFire: Dir: 2; toVanish: 9; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 5 x 3
+Dctor of Image: o
+Dctor of BombFire: Dir: 0; toVanish: 9; Power: 0
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 7 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 3; toVanish: 7; Power: 1
+Dctor of AABB: 1 x 1
+
+Entity:
+Dctor of Position: 7 x 5
+Dctor of Image: o
+Dctor of BombFire: Dir: 3; toVanish: 9; Power: 0
+Dctor of AABB: 1 x 1
+
