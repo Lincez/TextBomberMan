@@ -4,6 +4,11 @@
 #include "Components.h"
 #include "Thread.h"
 #include "LMap.h"
+#include <vector>
+
+#ifndef repeat
+#define repeat(varName, times) for (unsigned varName = 0; varName < times; varName++)
+#endif
 
 class Entity
 {
@@ -59,7 +64,7 @@ class World
 
         Entity* get(int pos)
         {
-            return (entityList.get(pos));
+            return (entityList[pos]);
         }
 
     protected:
@@ -69,10 +74,10 @@ class World
         int lastSec;
 
 //        Entity** entity;
-        List<Entity> entityList;
+        std::vector<Entity*> entityList;
 
-        List<Entity> toRemoveList;
-        List<Entity> toInsertList;
+        std::vector<Entity*> toRemoveList;
+        std::vector<Entity*> toInsertList;
 
         int qtdeEntity;
 

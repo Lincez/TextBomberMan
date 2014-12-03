@@ -55,8 +55,7 @@ World::World()
 {
     this->qtdeEntity = 0;
 
-    this->entityList.initialize();
-    this->entityList.setName("EntityList");
+    //this->entityList.setName("EntityList");
 
     mapOffset.x = mapOffset.y = 0;
     map.w = map.h = 20;
@@ -64,7 +63,10 @@ World::World()
 World::~World()
 {
 //    printf("Deletando World...\n");
-    this->entityList.clearAndFree();
+    repeat(i, entityList.size())
+    {
+        delete entityList[i];
+    }
 }
 
 Entity* World::createEntity()
@@ -73,7 +75,7 @@ Entity* World::createEntity()
 //    this->entity = (Entity**) realloc(this->entity, this->qtdeEntity*sizeof(Entity*));
 //    this->entity[this->qtdeEntity-1] = new Entity();
     Entity* ent = new Entity();
-    this->entityList.add(ent);
+    this->entityList.push_back(ent);
     return ent;
 }
 Entity* World::insertEntity(Entity* ent)
@@ -81,60 +83,65 @@ Entity* World::insertEntity(Entity* ent)
     this->qtdeEntity++;
 //    this->entity = (Entity**) realloc(this->entity, this->qtdeEntity*sizeof(Entity*));
 //    this->entity[this->qtdeEntity-1] = new Entity();
-    this->entityList.add(ent);
+    this->entityList.push_back(ent);
     return ent;
 }
 
 int World::removeEntity(int id)
 {
-    if (this->entityList.get(id) == NULL) return -1;
-    delete (this->entityList.get(id));
-    int rt = this->entityList.remove(id);
-    this->qtdeEntity= this->entityList.getAmount();
-    return rt;
+    if (entityList.size() == 0) return -1;
+    // Pega o ultimo da lista e poe no lugar do que vai sair
+    entityList[id] = entityList.back();
+    entityList.pop_back();
+    return 0;
 }
 int World::removeEntity(Entity* ent)
 {
-    int rt = this->entityList.remove(ent);
-    this->qtdeEntity= this->entityList.getAmount();
-    return rt;
+    repeat(i, entityList.size())
+    {
+        if (entityList[i] == ent)
+        {
+            removeEntity(i);
+            return 0;
+        }
+    }
+    return -1;
 }
 void World::removeLater(Entity* ent)
 {
-    if (this->toRemoveList.contain(ent)) return;
-    this->toRemoveList.add(ent);
+    repeat(i, toRemoveList.size())
+    {
+        if (toRemoveList[i] == ent) return;
+    }
+    toRemoveList.push_back(ent);
 }
 void World::removeSystem()
 {
-    LIterator<Entity> it(&this->toRemoveList);
-    while (it.hasNext())
+    repeat(i, toRemoveList.size())
     {
-        Entity* ent = it.next();
-        this->removeEntity(ent);
-        delete ent;
+        removeEntity(toRemoveList[i]);
+        delete toRemoveList[i];
     }
-    this->toRemoveList.clear();
+    while (toRemoveList.size() > 0) toRemoveList.pop_back();
 }
 void World::insertSystem()
 {
-    LIterator<Entity> it(&this->toInsertList);
-    while (it.hasNext())
+    repeat(i, toInsertList.size())
     {
-        this->insertEntity(it.next());
+        insertEntity(toInsertList[i]);
     }
-    this->toInsertList.clear();
+    while (toInsertList.size() > 0) toInsertList.pop_back();
 }
 void World::insertLater(Entity* ent)
 {
-    this->toInsertList.add(ent);
+    this->toInsertList.push_back(ent);
 }
 
 void World::runSystems(int key)
 {
-    LIterator<Entity> it(&this->entityList);
-    while (it.hasNext())
+    repeat(i, entityList.size())
     {
-        Entity* ent = it.next();
+        Entity* ent = entityList[i];
         controllerSystem(ent, key);
         movementSystem(ent);
         collisionSystem(ent);
@@ -292,10 +299,9 @@ void World::render()
     screen[BORDER_H*BORDER_W] = '\0';
     Entity* ent;
 
-    LIterator<Entity> it(&this->entityList);
-    while (it.hasNext())
+    repeat(i, entityList.size())
     {
-        ent = it.next();
+        ent = entityList[i];
         int renderPosX;
         int renderPosY;
         int renderPos;
@@ -375,11 +381,10 @@ void World::render()
 
 return;
     int i=0;
-    it.resetIterator();
-    while (it.hasNext())
+    repeat(entId, entityList.size())
     {
         printf("%d:\n", i++);
-        Entity* ent = it.next();
+        Entity* ent = entityList[entId];
         for (int i = 0; i < COMP_AMOUNT; i++)
         {
             if (ent->hasComponent((Component)i))
@@ -399,12 +404,10 @@ void World::collisionSystem(Entity* ent1)
         AABB* aabb1 = (AABB*) ent1->getComponent(COMP_AABB);
         Position* position1 = (Position*) ent1->getComponent(COMP_POSITION);
 
-        LIterator<Entity> it2(&this->entityList);
         bool canStart = false;
-        Entity* ent2;
-        while (it2.hasNext())
+        repeat(it2, entityList.size())
         {
-            ent2 = it2.next();
+            Entity* ent2 = entityList[it2];
             if (ent2->hasComponent(COMP_AABB) && ent2->hasComponent(COMP_POSITION) && canStart)
             {
                 AABB* aabb2 = (AABB*) ent2->getComponent(COMP_AABB);
@@ -617,7 +620,10 @@ void World::bombSystem(Entity* ent)
 
 void World::bombFireSystem(Entity* ent)
 {
-    if (this->toRemoveList.contain(ent)) return;
+    repeat(i, toRemoveList.size())
+    {
+        if (toRemoveList[i] == ent) return;
+    }
     if (ent->hasComponent(COMP_BOMBFIRE) &&
         ent->hasComponent(COMP_POSITION))
     {

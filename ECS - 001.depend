@@ -197,10 +197,11 @@
 1403308338 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\system.h
 	"World.h"
 
-1403643171 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\world.h
+1417565606 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\world.h
 	"Components.h"
 	"Thread.h"
 	"LMap.h"
+	<vector>
 
 1417564715 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\thread.h
 	<windows.h>
@@ -210,7 +211,7 @@
 1403108257 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\thread.cpp
 	"../include/Thread.h"
 
-1403644435 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\world.cpp
+1417566841 source:l:\diversos\programação\ecs\ecs - 001.2\textbomberman\src\world.cpp
 	"../include/World.h"
 	<time.h>
 
