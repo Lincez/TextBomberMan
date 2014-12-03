@@ -1,7 +1,5 @@
 
 #include "include/System.h"
-#include "include/LMap.h"
-#include "include/MainMenu.h"
 
 #include <list>
 #include <map>
@@ -43,9 +41,9 @@ int main()
     {
         delete new System;
     }
-    catch (LException* e)
+    catch (std::exception& e)
     {
-        printf("%s\n%s\n", e->getString(), e->details);
+        printf("%s\n\n", e.what());
     }
 
     return 0;

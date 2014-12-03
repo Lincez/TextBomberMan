@@ -3,7 +3,7 @@
 
 #include "Components.h"
 #include "Thread.h"
-#include "LMap.h"
+
 #include <vector>
 
 #ifndef repeat
@@ -135,11 +135,11 @@ class WorldRun : public LThread
                 {
                     world->runSystems(this->key);
                 }
-                catch (LException* e)
+                catch (std::exception& e)
                 {
                     renderer->stop();
                     system("cls");
-                    printf("%s\n%s\n", e->getString(), e->details);
+                    printf("%s\n\n", e.what());
                     system("pause");
                     this->running = false;
                 }
