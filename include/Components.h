@@ -9,7 +9,7 @@
 #define BOMB_MASK       (COMP_BOMB | COMP_POSITION | COMP_AABB | COMP_IMAGE)
 #define PLAYER_MASK     (COMP_PLAYER | MOVEMENT_MASK | COMP_IMAGE | COMP_AABB)
 
-#define L_visibility public
+#define Component(name) class name : public ComponentBase
 
 /** @info
     @todo Ao criar um novo component:
@@ -58,7 +58,7 @@ class ComponentBase
 
 typedef int dv ;
 
-class Position: L_visibility ComponentBase
+Component(Position)
 {
     public:
         Position()
@@ -81,7 +81,7 @@ class Position: L_visibility ComponentBase
     }
 };
 
-class Velocity : L_visibility ComponentBase
+Component(Velocity)
 {
     public:
         Velocity(dv x_ = 0, dv y_ = 0, bool infInertia = false)
@@ -102,7 +102,7 @@ class Velocity : L_visibility ComponentBase
     }
 };
 
-class Image : L_visibility ComponentBase
+Component(Image)
 {
     public:
         Image(){letter[0] = 0; lAmount = 0; lAtual = 0;}
@@ -148,7 +148,7 @@ class Image : L_visibility ComponentBase
 
 };
 
-class AABB: L_visibility ComponentBase
+Component(AABB)
 {
     public:
     AABB(){w = h = 0; this->barrier = true;}
@@ -170,7 +170,7 @@ class AABB: L_visibility ComponentBase
     bool barrier;
 } ;
 
-class Rect: L_visibility ComponentBase
+Component(Rect)
 {
     public:
     Rect(){w = h = 0;}
@@ -192,7 +192,7 @@ class Rect: L_visibility ComponentBase
 
 #define CONTROLLLER_ID_NONE 0
 #define CONTROLLLER_ID_KEYBOARD 1
-class Controller : L_visibility ComponentBase
+Component(Controller)
 {
     public:
     virtual Component getId(){return COMP_CONTROLLER;}
@@ -213,7 +213,7 @@ class Controller : L_visibility ComponentBase
     int bomb;
 };
 
-class AI: L_visibility ComponentBase
+Component(AI)
 {
     public:
     virtual Component getId(){return COMP_AI;}
@@ -227,7 +227,7 @@ class AI: L_visibility ComponentBase
     }
 };
 
-class Player: L_visibility ComponentBase
+Component(Player)
 {
     public:
     Player()
@@ -248,7 +248,7 @@ class Player: L_visibility ComponentBase
     int bombsPlaced;
 };
 
-class Bomb: L_visibility ComponentBase
+Component(Bomb)
 {
     public:
     Bomb(){}
@@ -278,7 +278,7 @@ typedef enum
     DIR_LEFT,
     DIR_RIGHT
 } Direction;
-class BombFire: L_visibility ComponentBase
+Component(BombFire)
 {
     public:
     BombFire(Direction direction_,int power_)
@@ -304,7 +304,7 @@ class BombFire: L_visibility ComponentBase
     bool madeChild;
 };
 
-class Hero: L_visibility ComponentBase
+Component(Hero)
 {
     public:
     virtual Component getId(){return COMP_HERO;}
@@ -314,7 +314,7 @@ class Hero: L_visibility ComponentBase
     }
 };
 
-class SoftWall : L_visibility ComponentBase
+Component(SoftWall)
 {
     public:
     virtual Component getId(){return COMP_SOFT_WALL;}
@@ -331,7 +331,7 @@ typedef enum
     P_KickBomb,
     P_Amount
 } PowerUpType;
-class PowerUp : L_visibility ComponentBase
+Component(PowerUp)
 {
     public:
         PowerUp(PowerUpType type_)
@@ -341,7 +341,7 @@ class PowerUp : L_visibility ComponentBase
         virtual Component getId() {return COMP_POWER_UP;}
         PowerUpType type;
 };
-class BombKicker : L_visibility ComponentBase
+Component(BombKicker)
 {
     public:
         virtual Component getId() {return COMP_BOMB_KICKER;}

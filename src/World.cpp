@@ -584,6 +584,9 @@ void World::powerUpToEntity(Entity* ent, Entity* powerUp)
                 case P_KickBomb:
                     ent->addComponent(new BombKicker);
                     break;
+                default:
+                #warning revise this
+                    break;
             }
         }
         this->removeLater(powerUp);

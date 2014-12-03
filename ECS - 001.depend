@@ -182,7 +182,7 @@
 
 1403206978 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\mainmenu.h
 
-1403643819 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\components.h
+1417564895 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\components.h
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
@@ -202,7 +202,7 @@
 	"Thread.h"
 	"LMap.h"
 
-1403109275 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\thread.h
+1417564715 l:\diversos\programação\ecs\ecs - 001.2\textbomberman\include\thread.h
 	<windows.h>
 	<exception>
 	<stdio.h>
