@@ -20,16 +20,11 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include\Components.h" />
-		<Unit filename="include\LClasses\Exception\LException.h" />
-		<Unit filename="include\LClasses\Lista\Lista.h" />
 		<Unit filename="include\LMap.h" />
-		<Unit filename="include\MainMenu.h" />
 		<Unit filename="include\System.h" />
 		<Unit filename="include\Thread.h" />
 		<Unit filename="include\World.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src\LMap.cpp" />
-		<Unit filename="src\MainMenu.cpp" />
 		<Unit filename="src\System.cpp" />
 		<Unit filename="src\Thread.cpp" />
 		<Unit filename="src\World.cpp" />

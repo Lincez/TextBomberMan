@@ -43,7 +43,7 @@ int main()
     }
     catch (std::exception& e)
     {
-        printf("%s\n\n", e.what());
+        printf("\nFatal Error:\n%s\n\n", e.what());
     }
 
     return 0;

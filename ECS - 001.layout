@@ -2,39 +2,30 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include\Components.h" open="0" top="0" tabpos="1">
-		<Cursor position="5974" topLine="73" />
-	</File>
-	<File name="include\LClasses\Exception\LException.h" open="0" top="0" tabpos="0">
-		<Cursor position="344" topLine="36" />
-	</File>
-	<File name="include\LClasses\Lista\Lista.h" open="0" top="0" tabpos="9">
-		<Cursor position="5808" topLine="2" />
+		<Cursor position="94" topLine="27" />
 	</File>
 	<File name="include\LMap.h" open="0" top="0" tabpos="7">
-		<Cursor position="3850" topLine="79" />
+		<Cursor position="89" topLine="0" />
 	</File>
 	<File name="include\System.h" open="0" top="0" tabpos="8">
-		<Cursor position="276" topLine="0" />
+		<Cursor position="188" topLine="0" />
 	</File>
 	<File name="include\Thread.h" open="0" top="0" tabpos="4">
-		<Cursor position="1051" topLine="41" />
+		<Cursor position="121" topLine="0" />
 	</File>
-	<File name="include\World.h" open="1" top="0" tabpos="1">
-		<Cursor position="101" topLine="0" />
+	<File name="include\World.h" open="1" top="1" tabpos="0">
+		<Cursor position="103" topLine="0" />
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="945" topLine="0" />
 	</File>
-	<File name="src\LMap.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="994" topLine="28" />
+	<File name="src\System.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="3189" topLine="120" />
 	</File>
-	<File name="src\MainMenu.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1891" topLine="39" />
-	</File>
-	<File name="src\System.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="675" topLine="93" />
+	<File name="src\Thread.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="188" topLine="24" />
 	</File>
 	<File name="src\World.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="15435" topLine="144" />
+		<Cursor position="18190" topLine="224" />
 	</File>
 </CodeBlocks_layout_file>
