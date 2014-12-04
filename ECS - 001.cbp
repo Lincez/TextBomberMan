@@ -20,7 +20,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include\Components.h" />
-		<Unit filename="include\LMap.h" />
 		<Unit filename="include\System.h" />
 		<Unit filename="include\Thread.h" />
 		<Unit filename="include\World.h" />

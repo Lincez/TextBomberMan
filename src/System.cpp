@@ -59,9 +59,9 @@ System::System()
             makeWall(i, j, 1, 1); // intermediarias
         }
     }
-    for (int i = 2; i < 20; i++)
+    for (int i = 2; i < 19; i++)
     {
-        for (int j = 2; j < 20; j++)
+        for (int j = 2; j < 19; j++)
         {
             if (wall[i][j] == false)
             {

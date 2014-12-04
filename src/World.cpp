@@ -358,9 +358,12 @@ void World::render()
     Entity* hero = this->get(0);
     Player* player = (Player*) hero->getComponent(COMP_PLAYER);
     printf("%d fps | %d ents | f:%d b:%d\n", this->fps, this->qtdeEntity, player->bombPower, player->bombAmount);
+
     for (int i = 0; i < BORDER_W; i++)
         printf("-");
-    if (BORDER_W == 80) printf(screen);
+
+    if (BORDER_W == 80)
+        printf(screen);
     else
     {
         printf("--\n");
